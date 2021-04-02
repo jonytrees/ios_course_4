@@ -16,7 +16,7 @@ class Databases {
     
     init() {
         db = try? Realm()
-//        print("file database: \(String(describing: db?.configuration.fileURL))")
+        print("file database: \(String(describing: db?.configuration.fileURL))")
     }
     
     func write(_ object: UserObject) {
@@ -43,6 +43,17 @@ class Databases {
     }
     
     func writeGroup(_ object: GroupObject) {
+        do {
+            db?.beginWrite()
+            db?.add(object)
+            try db?.commitWrite()
+        }
+        catch{
+            print("something error group")
+        }
+    }
+    
+    func writeGroupOperation(_ object: GroupOperationObject) {
         do {
             db?.beginWrite()
             db?.add(object)

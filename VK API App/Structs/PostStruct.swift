@@ -39,6 +39,10 @@ struct Group: Decodable {
     var id: Int = 0
     var name: String = ""
     var photo_50: String = ""
+    
+    func toGroupObject() -> GroupOperationObject {
+        return GroupOperationObject(name: name, photo_50: photo_50)
+    }
 }
 
 struct CommentsContainer: Decodable {

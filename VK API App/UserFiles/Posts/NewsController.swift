@@ -24,7 +24,6 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var version = "5.130"
     private var tokenRealm: NotificationToken?
     private var tokenTextRealm: NotificationToken?
-    var netWork = NetWork()
    
     
     @IBOutlet weak var tableview: UITableView!
