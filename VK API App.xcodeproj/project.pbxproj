@@ -22,6 +22,8 @@
 		8439895B25C8694800135F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439895925C8694800135F31 /* LaunchScreen.storyboard */; };
 		8439896425C869DF00135F31 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439896325C869DF00135F31 /* Session.swift */; };
 		846D32F925DAF49700873AC5 /* GroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D32F825DAF49700873AC5 /* GroupController.swift */; };
+		84881578261C569B00A1BA40 /* PromisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84881577261C569B00A1BA40 /* PromisesViewController.swift */; };
+		8488157B261C56B800A1BA40 /* PromisesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488157A261C56B800A1BA40 /* PromisesViewCell.swift */; };
 		8489D83825D70F5500352C94 /* TableGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489D83725D70F5500352C94 /* TableGroupCell.swift */; };
 		849934DB260BD11300D6847F /* NetworkPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849934DA260BD11300D6847F /* NetworkPosts.swift */; };
 		849A5ACD25E434C3003D7918 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A5ACC25E434C3003D7918 /* Structs.swift */; };
@@ -60,6 +62,8 @@
 		8439895C25C8694800135F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8439896325C869DF00135F31 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		846D32F825DAF49700873AC5 /* GroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupController.swift; sourceTree = "<group>"; };
+		84881577261C569B00A1BA40 /* PromisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisesViewController.swift; sourceTree = "<group>"; };
+		8488157A261C56B800A1BA40 /* PromisesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisesViewCell.swift; sourceTree = "<group>"; };
 		8489D83725D70F5500352C94 /* TableGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableGroupCell.swift; sourceTree = "<group>"; };
 		849934DA260BD11300D6847F /* NetworkPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPosts.swift; sourceTree = "<group>"; };
 		849A5ACC25E434C3003D7918 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 		8439894D25C8694500135F31 /* VK API App */ = {
 			isa = PBXGroup;
 			children = (
+				84881576261C566C00A1BA40 /* Promises */,
 				84FD8BA926124E4700A6DCAE /* GroupOperation */,
 				842B0BCA25ED685800B3A88B /* FirebaseFolder */,
 				849A5ACB25E434A6003D7918 /* Structs */,
@@ -145,6 +150,15 @@
 				84CF0ED725DD4CFD00DE3F7B /* DB.swift */,
 			);
 			path = "VK API App";
+			sourceTree = "<group>";
+		};
+		84881576261C566C00A1BA40 /* Promises */ = {
+			isa = PBXGroup;
+			children = (
+				84881577261C569B00A1BA40 /* PromisesViewController.swift */,
+				8488157A261C56B800A1BA40 /* PromisesViewCell.swift */,
+			);
+			path = Promises;
 			sourceTree = "<group>";
 		};
 		849934D9260BD0CD00D6847F /* Posts */ = {
@@ -330,6 +344,7 @@
 				84FD8BAB26124EA300A6DCAE /* GroupOperationController.swift in Sources */,
 				8489D83825D70F5500352C94 /* TableGroupCell.swift in Sources */,
 				84BEDFD025D6B4FF00A53854 /* PhotoController.swift in Sources */,
+				84881578261C569B00A1BA40 /* PromisesViewController.swift in Sources */,
 				8439896425C869DF00135F31 /* Session.swift in Sources */,
 				84FD8BAE261251BC00A6DCAE /* ParseGroups.swift in Sources */,
 				8415153C26076DB00071218D /* NewsCell.swift in Sources */,
@@ -342,6 +357,7 @@
 				8439894F25C8694500135F31 /* AppDelegate.swift in Sources */,
 				846D32F925DAF49700873AC5 /* GroupController.swift in Sources */,
 				842CCD5E260A0A1C00A9B422 /* PostsController.swift in Sources */,
+				8488157B261C56B800A1BA40 /* PromisesViewCell.swift in Sources */,
 				84FD8BB72612578600A6DCAE /* ReloadGroupsController.swift in Sources */,
 				8415153926076CFC0071218D /* NewsController.swift in Sources */,
 				8435846B25C893AB0038F518 /* GetDatesController.swift in Sources */,

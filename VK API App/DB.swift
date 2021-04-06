@@ -16,7 +16,7 @@ class Databases {
     
     init() {
         db = try? Realm()
-        print("file database: \(String(describing: db?.configuration.fileURL))")
+//        print("file database: \(String(describing: db?.configuration.fileURL))")
     }
     
     func write(_ object: UserObject) {
