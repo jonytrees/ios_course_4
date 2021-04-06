@@ -36,7 +36,7 @@ class PostsController: UIViewController, UITableViewDelegate, UITableViewDataSou
                 self?.itemsArr = items
                 self!.dispatchGroup.leave()
             })
-
+        
         
         dispatchGroup.notify(queue: .main) {
             self.tableView.reloadData()
@@ -51,19 +51,19 @@ class PostsController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NewsCell
         let idItems = itemsArr[indexPath.row].itemId
         
-        for group in groupsArr {
-            if idItems == -group.id {
-                let name = group.name
-                let photo = group.photo_50
-                let text = itemsArr[indexPath.row].text
-                let comment = itemsArr[indexPath.row].comments
-                let likes = itemsArr[indexPath.row].likes
-                let reposts = itemsArr[indexPath.row].reposts
-                let date = itemsArr[indexPath.row].date
-                let views = itemsArr[indexPath.row].views
-                cell.setDataPost(name: name, photo: photo, text: text, commentCount: comment, likes: likes, reposts: reposts, date: date, views: views)
-            }
-        }
+        //        for group in groupsArr {
+        //            if idItems == -group.id {
+        let name = groupsArr[indexPath.row].name
+        let photo = groupsArr[indexPath.row].photo_50
+        let text = itemsArr[indexPath.row].text
+        let comment = itemsArr[indexPath.row].comments
+        let likes = itemsArr[indexPath.row].likes
+        let reposts = itemsArr[indexPath.row].reposts
+        let date = itemsArr[indexPath.row].date
+        let views = itemsArr[indexPath.row].views
+        cell.setDataPost(name: name, photo: photo, text: text, commentCount: comment, likes: likes, reposts: reposts, date: date, views: views)
+        //            }
+        //        }
         return cell
     }
 }

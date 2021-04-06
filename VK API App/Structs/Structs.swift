@@ -20,6 +20,8 @@ struct FairbaseNameGroup {
 }
 
 
+
+// TODO: User
 struct UserStruct: Codable {
     var id: Int
     var first_name: String
@@ -33,56 +35,6 @@ struct UserStruct: Codable {
                           bdate: bdate)
     }
 }
-
-struct GroupStruct: Decodable {
-    var name: String
-    var photo_50: String
-    
-    func toGroupObject() -> Group {
-        return Group(name: name, photo_50: photo_50)
-    }
-    
-}
-
-struct PhotoStruct: Decodable {
-    var photo_1280: String
-    
-    func toPhotoObject() -> PhotoObject {
-        return PhotoObject(photo: photo_1280)
-    }
-}
-
-
-struct NewsStruct: Decodable {
-    var name: String
-    var photo_100: String
-    
-    func toNewsObject() -> NewsObject {
-        return NewsObject(name: name, photo: photo_100)
-    }
-}
-
-struct TextNewsStruct: Decodable {
-    var text: String?
-//    var comments: CommentStruct?
-    
-    func toTextNewsObject() -> TextNewsObject {
-        return TextNewsObject(text: text ?? "")
-    }
-}
-
-
-//struct CommentStruct: Decodable {
-//    var comments: Int?
-//    var comments: CommentStruct?
-//
-//    func toCommentObject() -> CommentsObject {
-//        return CommentsObject(comments: comments ?? 0)
-//    }
-//}
-
-
-
 
 class UserObject: Object {
     @objc dynamic var id: Int = 0
@@ -113,6 +65,17 @@ class UserObject: Object {
 }
 
 
+// TODO: Group
+struct GroupStruct: Decodable {
+    var name: String
+    var photo_50: String
+    
+    func toGroupObject() -> GroupObject {
+        return GroupObject(name: name, photo_50: photo_50)
+    }
+    
+}
+
 class GroupObject: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var photo_50: String = ""
@@ -131,6 +94,34 @@ class GroupObject: Object {
 }
 
 
+// TODO: GroupOperation
+class GroupOperationObject: Object {
+    @objc dynamic var name: String = ""
+    @objc dynamic var photo_50: String = ""
+    
+    override init() {}
+    
+    convenience required init(name: String, photo_50: String) {
+        self.init()
+        self.name = name
+        self.photo_50 = photo_50
+    }
+    
+    func toGroupOperationStruct() -> Group {
+        return Group(name: name, photo_50: photo_50)
+    }
+}
+
+
+// TODO: Photo
+struct PhotoStruct: Decodable {
+    var photo_1280: String
+    
+    func toPhotoObject() -> PhotoObject {
+        return PhotoObject(photo: photo_1280)
+    }
+}
+
 class PhotoObject: Object {
     @objc dynamic var photo_1280: String = ""
     
@@ -146,6 +137,15 @@ class PhotoObject: Object {
     }
 }
 
+// TODO: News
+struct NewsStruct: Decodable {
+    var name: String
+    var photo_100: String
+    
+    func toNewsObject() -> NewsObject {
+        return NewsObject(name: name, photo: photo_100)
+    }
+}
 
 class NewsObject: Object {
     @objc dynamic var name: String = ""
@@ -164,38 +164,28 @@ class NewsObject: Object {
     }
 }
 
+
+// TODO: TextNews
+struct TextNewsStruct: Decodable {
+    var text: String?
+    
+    func toTextNewsObject() -> TextNewsObject {
+        return TextNewsObject(text: text ?? "")
+    }
+}
+
 class TextNewsObject: Object {
     @objc dynamic var text: String? = ""
-//    dynamic var comments: CommentStruct = CommentStruct(can_post: 0, count: 0)
     
     override init() {}
     
     convenience required init(text: String) {
         self.init()
         self.text = text
-//        self.comments = comments
     }
     
     func toTextNewsStruct() -> TextNewsStruct {
         return TextNewsStruct(text: text ?? "")
     }
 }
-
-
-//class CommentsObject: Object {
-//    @objc dynamic var comments: Int? = 0
-//    dynamic var comments: CommentStruct = CommentStruct(can_post: 0, count: 0)
-    
-//    override init() {}
-//
-//    convenience required init(comments: Int) {
-//        self.init()
-//        self.comments = text
-//        self.comments = comments
-//    }
-    
-//    func toCommentsStruct() -> CommentsStruct {
-//        return CommentsStruct(comments: comments ?? 0)
-//    }
-//}
 
