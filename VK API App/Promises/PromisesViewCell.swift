@@ -11,10 +11,14 @@ class PromisesViewCell: UITableViewCell {
 
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
-    
-    func setNameFriends(firstName: String, lastName: String) {
+    @IBOutlet weak var imageFriends: UIImageView!
+    func setNameFriends(firstName: String, lastName: String, photo: String) {
         firstNameLabel.text = firstName
         lastNameLabel.text = lastName
+        
+        let urlImg = URL(string: photo)
+        let dataImg = try? Data(contentsOf: urlImg!)
+        imageFriends.image = UIImage(data: dataImg!)
     }
 
 }

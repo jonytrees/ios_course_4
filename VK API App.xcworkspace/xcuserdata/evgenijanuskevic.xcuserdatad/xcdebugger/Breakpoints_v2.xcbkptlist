@@ -1337,14 +1337,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9415CCB3-E894-420E-B52D-15B837BC1264"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VK API App/Promises/PromisesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1359,8 +1359,8 @@
             filePath = "VK API App/Promises/PromisesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1369,7 +1369,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "54F75FB3-5539-4B8C-9B84-9ECE43F2C81A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VK API App/GroupOperation/GroupOperationController.swift"
@@ -1379,6 +1379,430 @@
             endingLineNumber = "46"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BDF88A7-BC7C-4BDE-AF7A-2FEDB4A9431D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/Promises/PromisesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "forecast()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "205DA29E-74D9-430C-9379-71EA036D08B0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/Promises/PromisesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "forecast()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A40CA82-EE80-446D-A44F-178F9084F751"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/Promises/PromisesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "332A2E41-7197-4897-8703-EFC17E669239"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/Promises/PromisesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "forecast()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEC957BE-3324-48CD-B91B-78BE6BB43189"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/Promises/PromisesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "forecast()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "675203DF-71F1-4C4C-9C82-9A0CAE1BAE60"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/Promises/PromisesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "PromisesViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "675203DF-71F1-4C4C-9C82-9A0CAE1BAE60 - b65219a998e7e038"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VK_API_App.PromisesViewController.friendsArr.getter : Swift.Array&lt;VK_API_App.ItemsFriends&gt;"
+                  moduleName = "VK API App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/evgenijanuskevic/Desktop/VK%20API%20App/VK%20API%20App/VK%20API%20App/Promises/PromisesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "675203DF-71F1-4C4C-9C82-9A0CAE1BAE60 - cc1c27534481f02c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VK_API_App.PromisesViewController.friendsArr.setter : Swift.Array&lt;VK_API_App.ItemsFriends&gt;"
+                  moduleName = "VK API App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/evgenijanuskevic/Desktop/VK%20API%20App/VK%20API%20App/VK%20API%20App/Promises/PromisesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "675203DF-71F1-4C4C-9C82-9A0CAE1BAE60 - bbd38fed732a7362"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VK_API_App.PromisesViewController.friendsArr.modify : Swift.Array&lt;VK_API_App.ItemsFriends&gt;"
+                  moduleName = "VK API App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/evgenijanuskevic/Desktop/VK%20API%20App/VK%20API%20App/VK%20API%20App/Promises/PromisesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "675203DF-71F1-4C4C-9C82-9A0CAE1BAE60 - da5aa11a61ad5a80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VK_API_App.PromisesViewController.friendsArr.modify : Swift.Array&lt;VK_API_App.ItemsFriends&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "VK API App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/evgenijanuskevic/Desktop/VK%20API%20App/VK%20API%20App/VK%20API%20App/Promises/PromisesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "675203DF-71F1-4C4C-9C82-9A0CAE1BAE60 - 90e674498e9c4103"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VK_API_App.PromisesViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; VK_API_App.PromisesViewController"
+                  moduleName = "VK API App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/evgenijanuskevic/Desktop/VK%20API%20App/VK%20API%20App/VK%20API%20App/Promises/PromisesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "928">
+               </Location>
+               <Location
+                  uuid = "675203DF-71F1-4C4C-9C82-9A0CAE1BAE60 - a6a5c2c7e77b8967"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VK_API_App.PromisesViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;VK_API_App.PromisesViewController&gt;"
+                  moduleName = "VK API App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/evgenijanuskevic/Desktop/VK%20API%20App/VK%20API%20App/VK%20API%20App/Promises/PromisesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "869">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "580CB5E7-9A96-453E-957F-7F7E24F8221B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/GroupOperation/GroupOperationController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6A1C7A8-E961-478B-8416-782A7BCB3441"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/GroupOperation/GroupOperationController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "GroupOperationController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C6A1C7A8-E961-478B-8416-782A7BCB3441 - 4ceac0a6157cb5e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VK_API_App.GroupOperationController.photoService.getter : Swift.Optional&lt;VK_API_App.PhotoService&gt;"
+                  moduleName = "VK API App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/evgenijanuskevic/Desktop/VK%20API%20App/VK%20API%20App/VK%20API%20App/GroupOperation/GroupOperationController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "C6A1C7A8-E961-478B-8416-782A7BCB3441 - 7609ba75d4ea2d86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VK_API_App.GroupOperationController.photoService.setter : Swift.Optional&lt;VK_API_App.PhotoService&gt;"
+                  moduleName = "VK API App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/evgenijanuskevic/Desktop/VK%20API%20App/VK%20API%20App/VK%20API%20App/GroupOperation/GroupOperationController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "C6A1C7A8-E961-478B-8416-782A7BCB3441 - 7ab3da770aa0008e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VK_API_App.GroupOperationController.photoService.modify : Swift.Optional&lt;VK_API_App.PhotoService&gt;"
+                  moduleName = "VK API App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/evgenijanuskevic/Desktop/VK%20API%20App/VK%20API%20App/VK%20API%20App/GroupOperation/GroupOperationController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "C6A1C7A8-E961-478B-8416-782A7BCB3441 - 25a2e9e90b03f441"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VK_API_App.GroupOperationController.photoService.modify : Swift.Optional&lt;VK_API_App.PhotoService&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "VK API App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/evgenijanuskevic/Desktop/VK%20API%20App/VK%20API%20App/VK%20API%20App/GroupOperation/GroupOperationController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "C6A1C7A8-E961-478B-8416-782A7BCB3441 - 800153c232e114c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VK_API_App.GroupOperationController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; VK_API_App.GroupOperationController"
+                  moduleName = "VK API App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/evgenijanuskevic/Desktop/VK%20API%20App/VK%20API%20App/VK%20API%20App/GroupOperation/GroupOperationController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1049">
+               </Location>
+               <Location
+                  uuid = "C6A1C7A8-E961-478B-8416-782A7BCB3441 - a646a57bd6877527"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VK_API_App.GroupOperationController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;VK_API_App.GroupOperationController&gt;"
+                  moduleName = "VK API App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/evgenijanuskevic/Desktop/VK%20API%20App/VK%20API%20App/VK%20API%20App/GroupOperation/GroupOperationController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "984">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8B3FA42-939F-4DF2-9CBD-E58951C62FBC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/GroupOperation/GroupFileManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "pathName"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C41CEE09-A55E-4649-B898-97E34E97157B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/GroupOperation/GroupFileManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getFilePath(url:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0DD9F137-EBE0-4EBD-AC17-A7DD0C9302DF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/GroupOperation/GroupFileManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getImageFromCache(url:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C082DF6C-C825-4709-BC78-01D8E0F20ECA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/GroupOperation/GroupFileManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "loadPhoto(atIndexpath:byUrl:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "589C4237-938C-45CB-8338-43944637E8B2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/GroupOperation/GroupFileManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "photo(atIndexpath:byUrl:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D3B1AD9-CE65-417B-AF4A-68848D6868F2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/GroupOperation/GroupFileManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "photo(atIndexpath:byUrl:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "702D46AA-6368-4BBA-A269-33CC569E43D9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VK API App/GroupOperation/GroupFileManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "Table"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

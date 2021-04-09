@@ -67,8 +67,8 @@ class NetworkPosts {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if data != nil && error == nil {
                 let apiResponse = try? JSONDecoder().decode(Response.self, from: data!)
-                var items = apiResponse!.response.items
-                var groups = apiResponse!.response.groups
+                let items = apiResponse!.response.items
+                let groups = apiResponse!.response.groups
                 let dispatchGroup = DispatchGroup()
                 
 //                for item in items!.enumerated() {

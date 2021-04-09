@@ -143,7 +143,7 @@
         <!--class Photo-->
         <scene sceneID="PyV-Uu-pMz">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="IE3-jN-1kL" customClass="PhotoController" customModule="VK_API_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="IE3-jN-1kL" customClass="PhotoService" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fc4-6W-NJo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -461,37 +461,47 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" red="0.27077248300000001" green="0.39878119899999998" blue="0.81307601979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPromises" id="1Lz-Y7-R0c" customClass="PromisesViewCell" customModule="VK_API_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPromises" rowHeight="83" id="1Lz-Y7-R0c" customClass="PromisesViewCell" customModule="VK_API_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Lz-Y7-R0c" id="hc6-FR-BbS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVi-DB-w1a">
-                                                    <rect key="frame" x="20" y="11" width="89" height="21"/>
+                                                    <rect key="frame" x="107" y="31" width="89" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xuY-H4-YRX">
+                                                    <rect key="frame" x="20" y="11" width="73" height="61"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="61" id="0tk-VI-kGx"/>
+                                                        <constraint firstAttribute="width" constant="73" id="LT9-i6-jQf"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eg-Lb-AWH">
-                                                    <rect key="frame" x="124" y="11" width="270" height="21"/>
+                                                    <rect key="frame" x="211" y="31" width="183" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="eVi-DB-w1a" firstAttribute="leading" secondItem="xuY-H4-YRX" secondAttribute="trailing" constant="14" id="2fx-dx-CO3"/>
+                                                <constraint firstItem="xuY-H4-YRX" firstAttribute="top" secondItem="hc6-FR-BbS" secondAttribute="top" constant="11" id="JGb-Kf-zOk"/>
                                                 <constraint firstItem="4eg-Lb-AWH" firstAttribute="leading" secondItem="eVi-DB-w1a" secondAttribute="trailing" constant="15" id="Luy-jL-JeO"/>
                                                 <constraint firstAttribute="trailing" secondItem="4eg-Lb-AWH" secondAttribute="trailing" constant="20" id="Vki-Vw-gaA"/>
-                                                <constraint firstItem="eVi-DB-w1a" firstAttribute="leading" secondItem="hc6-FR-BbS" secondAttribute="leading" constant="20" id="ZoK-9h-san"/>
-                                                <constraint firstItem="4eg-Lb-AWH" firstAttribute="leading" secondItem="hc6-FR-BbS" secondAttribute="leading" constant="124" id="bhr-nR-J0i"/>
-                                                <constraint firstItem="eVi-DB-w1a" firstAttribute="top" secondItem="hc6-FR-BbS" secondAttribute="top" constant="11" id="cFD-Dp-Dfp"/>
-                                                <constraint firstItem="4eg-Lb-AWH" firstAttribute="top" secondItem="hc6-FR-BbS" secondAttribute="top" constant="11" id="hnQ-ar-8da"/>
+                                                <constraint firstItem="4eg-Lb-AWH" firstAttribute="leading" secondItem="hc6-FR-BbS" secondAttribute="leading" constant="211" id="bhr-nR-J0i"/>
+                                                <constraint firstItem="eVi-DB-w1a" firstAttribute="top" secondItem="hc6-FR-BbS" secondAttribute="top" constant="31" id="cFD-Dp-Dfp"/>
+                                                <constraint firstItem="4eg-Lb-AWH" firstAttribute="top" secondItem="hc6-FR-BbS" secondAttribute="top" constant="31" id="hnQ-ar-8da"/>
+                                                <constraint firstItem="xuY-H4-YRX" firstAttribute="leading" secondItem="hc6-FR-BbS" secondAttribute="leading" constant="20" id="kTP-9G-PvO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="firstNameLabel" destination="eVi-DB-w1a" id="8tf-gt-x7e"/>
+                                            <outlet property="imageFriends" destination="xuY-H4-YRX" id="ne7-sT-qBd"/>
                                             <outlet property="lastNameLabel" destination="4eg-Lb-AWH" id="oY8-kR-x6X"/>
                                         </connections>
                                     </tableViewCell>

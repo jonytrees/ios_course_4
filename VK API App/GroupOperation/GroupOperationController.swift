@@ -18,6 +18,7 @@ class GroupOperationController: UIViewController, UITableViewDelegate, UITableVi
     var version = "5.130"
     var groupsData: [Group] = []
     let operationQueue = OperationQueue()
+    var photoService: PhotoService?
     
     @IBOutlet weak var tableView: UITableView!
    
@@ -27,7 +28,6 @@ class GroupOperationController: UIViewController, UITableViewDelegate, UITableVi
         tableView.dataSource = self
         
         let urlString = "https://api.vk.com/method/groups.get?extended=1&fields=bdate&access_token=\(token)&v=\(version)"
-        print("urlString: \(urlString)")
         
         let url = URLRequest(url: URL(string: urlString)!)
         
@@ -43,7 +43,7 @@ class GroupOperationController: UIViewController, UITableViewDelegate, UITableVi
         reloadController.addDependency(parseData)
         OperationQueue.main.addOperation(reloadController)
         
-        print(groupsData)
+        photoService = PhotoService(container: tableView)
     }
     
 
@@ -60,9 +60,14 @@ class GroupOperationController: UIViewController, UITableViewDelegate, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! GroupOperationCell
         
         let name = groupsData[indexPath.row].name
-        let photo = groupsData[indexPath.row].photo_50
+//        let photo = groupsData[indexPath.row].photo_50
+        let photo = photoService?.photo(atIndexpath: indexPath, byUrl: groupsData[indexPath.row].photo_50)
         
         cell.setNamePhoto(name: name, photo: photo)
+        
+//        cell.nameLabel.text = name
+        
+//        cell.imageGroup.image = photoService?.photo(atIndexpath: indexPath, byUrl: photo)
         
         return cell
     }
