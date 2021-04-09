@@ -42,6 +42,8 @@ class GroupOperationController: UIViewController, UITableViewDelegate, UITableVi
         let reloadController = ReloadGroupsController(controller: self)
         reloadController.addDependency(parseData)
         OperationQueue.main.addOperation(reloadController)
+        
+        print(groupsData)
     }
     
 

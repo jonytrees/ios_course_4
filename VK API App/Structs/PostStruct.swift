@@ -59,6 +59,8 @@ struct Items: Decodable {
     var views: Int = 0
     var authorName: String = ""
     var ava: String = ""
+//    var firstName: String = ""
+//    var lastName: String = ""
 
 
     enum CodingKeys: String, CodingKey {
@@ -70,6 +72,8 @@ struct Items: Decodable {
         case reposts
         case views
         case count
+//        case firstName = "first_name"
+//        case lastName = "last_name"
     }
 
     enum CommentsKeys: String, CodingKey {
@@ -81,6 +85,8 @@ struct Items: Decodable {
         self.itemId = try items.decode(Int.self, forKey: .itemId)
         self.text = try items.decode(String.self, forKey: .text)
         self.date = try items.decode(Int.self, forKey: .date)
+//        self.firstName = try items.decode(String.self, forKey: .firstName)
+//        self.lastName = try items.decode(String.self, forKey: .lastName)
 
         let commetsJson = try items.nestedContainer(keyedBy: CodingKeys.self, forKey: .comments)
         self.comments = try commetsJson.decode(Int.self, forKey: .count)
