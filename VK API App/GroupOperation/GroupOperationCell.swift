@@ -13,10 +13,9 @@ class GroupOperationCell: UITableViewCell {
     @IBOutlet weak var imageGroup: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
-    func setNamePhoto(name: String, photo: String) {
-        let urlImg = URL(string: photo)
-        let dataImg = try? Data(contentsOf: urlImg!)
-        imageGroup.image = UIImage(data: dataImg!)
+    func setNamePhoto(name: String, photo: UIImage?) {
+        
+        imageGroup.image = photo
         
         nameLabel.text = name
         nameLabel.numberOfLines = 1

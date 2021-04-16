@@ -12,16 +12,19 @@ import Alamofire
 struct ItemsFriends: Decodable {
     var firstName: String = ""
     var lastName: String = ""
+    var photo: String = ""
     
     enum CodingKeys: String, CodingKey {
         case firstName = "first_name"
         case lastName = "last_name"
+        case photo = "photo_50"
     }
     
     init(from decoder: Decoder) throws {
         let items = try decoder.container(keyedBy: CodingKeys.self)
         self.firstName = try items.decode(String.self, forKey: .firstName)
         self.lastName = try items.decode(String.self, forKey: .lastName)
+        self.photo = try items.decode(String.self, forKey: .photo)
     }
 }
 
@@ -75,8 +78,9 @@ class PromisesViewController: UIViewController, UITableViewDelegate, UITableView
         
         let firstName = friendsArr[indexPath.row].firstName
         let lastName = friendsArr[indexPath.row].lastName
+        let photoFriends = friendsArr[indexPath.row].photo
         
-        cell.setNameFriends(firstName: firstName, lastName: lastName)
+        cell.setNameFriends(firstName: firstName, lastName: lastName, photo: photoFriends)
         
         return cell
     }

@@ -31,6 +31,7 @@
 		84CF0ED325DD4CCE00DE3F7B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 84CF0ED225DD4CCE00DE3F7B /* RealmSwift */; };
 		84CF0ED525DD4CCE00DE3F7B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 84CF0ED425DD4CCE00DE3F7B /* Realm */; };
 		84CF0ED825DD4CFD00DE3F7B /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF0ED725DD4CFD00DE3F7B /* DB.swift */; };
+		84D0AB182620801E005A42AC /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0AB172620801E005A42AC /* PhotoService.swift */; };
 		84E8707025D5C0890093F41A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8706F25D5C0890093F41A /* UserController.swift */; };
 		84EEBA3025EE611A0040FA99 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEBA2F25EE611A0040FA99 /* FirebaseController.swift */; };
 		84FD8BAB26124EA300A6DCAE /* GroupOperationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD8BAA26124EA300A6DCAE /* GroupOperationController.swift */; };
@@ -69,6 +70,7 @@
 		849A5ACC25E434C3003D7918 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		84BEDFCF25D6B4FF00A53854 /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		84CF0ED725DD4CFD00DE3F7B /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
+		84D0AB172620801E005A42AC /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		84E8706F25D5C0890093F41A /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		84EEBA2F25EE611A0040FA99 /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
 		84FD8BAA26124EA300A6DCAE /* GroupOperationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupOperationController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				84FD8BB32612534100A6DCAE /* AsyncOperation.swift */,
 				84FD8BB62612578600A6DCAE /* ReloadGroupsController.swift */,
 				84FD8BB92612762200A6DCAE /* GroupOperationCell.swift */,
+				84D0AB172620801E005A42AC /* PhotoService.swift */,
 			);
 			path = GroupOperation;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				8435846B25C893AB0038F518 /* GetDatesController.swift in Sources */,
 				842B0BCC25ED689B00B3A88B /* FirebaseService.swift in Sources */,
 				8439895125C8694500135F31 /* SceneDelegate.swift in Sources */,
+				84D0AB182620801E005A42AC /* PhotoService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
