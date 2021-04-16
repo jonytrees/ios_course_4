@@ -16,22 +16,15 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var repostsLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var viewsLabel: UILabel!
+    
     func setDataPost(name: String, photo: String, text: String, commentCount: Int, likes: Int, reposts: Int, date: Int, views: Int) {
-        let format = DateFormatter()
-        format.dateFormat = "dd-MM-yyyy"
-        let timeInterval = TimeInterval(date)
-        let myNSDate = Date(timeIntervalSince1970: timeInterval)
-        let formattedDate = format.string(from: myNSDate)
-        dateLabel.text = String(formattedDate)
-        
+        let dateFormat = NewsCellDateFormatter.shared.string(from: date)
+        dateLabel.text = String(dateFormat)
         nameNew.lineBreakMode = .byCharWrapping
         nameNew.numberOfLines = 0
         nameNew.text = name
-
-        let urlImg = URL(string: photo)
-        let dataImg = try? Data(contentsOf: urlImg!)
+        let dataImg = NewsCellDateFormatter.shared.image(from: photo)
         imagePost.image = UIImage(data: dataImg!)
-        
         textPost.text = text
         textPost.translatesAutoresizingMaskIntoConstraints = false
         textPost.sizeToFit()
@@ -41,5 +34,33 @@ class NewsCell: UITableViewCell {
         repostsLabel.text = String(reposts)
         viewsLabel.text = String(views)
     }
+}
 
+
+private class NewsCellDateFormatter {
+    static let shared = NewsCellDateFormatter()
+    private var cache = [TimeInterval: String]()
+    let format: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        return formatter
+    }()
+    
+    func string(from timeInterval: Int) -> String {
+        let timeInterval = TimeInterval(timeInterval)
+        if let result = cache[timeInterval] {
+            return result
+        } else {
+            let myNSDate = Date(timeIntervalSince1970: timeInterval)
+            let formattedDate = format.string(from: myNSDate)
+            cache[timeInterval] = formattedDate
+            return formattedDate
+        }
+    }
+    
+    func image(from url: String) -> Data? {
+        let urlImg = URL(string: url)
+        let dataImg = try? Data(contentsOf: urlImg!)
+        return dataImg
+    }
 }

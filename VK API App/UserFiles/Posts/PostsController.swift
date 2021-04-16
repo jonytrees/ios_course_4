@@ -51,8 +51,7 @@ class PostsController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NewsCell
         let idItems = itemsArr[indexPath.row].itemId
         
-        //        for group in groupsArr {
-        //            if idItems == -group.id {
+
         let name = groupsArr[indexPath.row].name
         let photo = groupsArr[indexPath.row].photo_50
         let text = itemsArr[indexPath.row].text
@@ -62,8 +61,7 @@ class PostsController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let date = itemsArr[indexPath.row].date
         let views = itemsArr[indexPath.row].views
         cell.setDataPost(name: name, photo: photo, text: text, commentCount: comment, likes: likes, reposts: reposts, date: date, views: views)
-        //            }
-        //        }
+
         return cell
     }
 }
