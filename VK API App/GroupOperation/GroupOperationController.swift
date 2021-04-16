@@ -58,17 +58,9 @@ class GroupOperationController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! GroupOperationCell
-        
         let name = groupsData[indexPath.row].name
-//        let photo = groupsData[indexPath.row].photo_50
         let photo = photoService?.photo(atIndexpath: indexPath, byUrl: groupsData[indexPath.row].photo_50)
-        
         cell.setNamePhoto(name: name, photo: photo)
-        
-//        cell.nameLabel.text = name
-        
-//        cell.imageGroup.image = photoService?.photo(atIndexpath: indexPath, byUrl: photo)
-        
         return cell
     }
 }

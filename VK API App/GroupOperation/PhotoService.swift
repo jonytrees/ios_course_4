@@ -12,7 +12,7 @@ import Alamofire
 class PhotoService {
     
     // определяет время в секундак в течение которого кеш считается актуальным
-    let cacheLifeTime: TimeInterval = 30 * 24 * 60 * 60
+    private static let cacheLifeTime: TimeInterval = 30 * 24 * 60 * 60
     
     // папка в которой будут сохранятся изображения
     static let pathName: String = {
@@ -45,32 +45,31 @@ class PhotoService {
     }
     
     
-    // загружает изображение из файловой системы и при этом проводит ряд проверок
-    private func getImageFromCache(url: String) -> UIImage? {
-       guard let fileName = getFilePath(url: url),
-            let info = try? FileManager.default.attributesOfItem(atPath: fileName),
-            let modificationDate = info[FileAttributeKey.modificationDate] as? Date else {return nil}
+    // проверяем кеш на наличие старых картинок и заменяем их на новые
+    private class func isFileOld(path: String) -> Bool {
+        guard
+            let info = try? FileManager.default.attributesOfItem(atPath: path),
+            let modificationDate = info[FileAttributeKey.modificationDate] as? Date
+        else { return true }
         
         let lifeTime = Date().timeIntervalSince(modificationDate)
         
-      guard lifeTime <= cacheLifeTime,
-             let image = UIImage(contentsOfFile: fileName) else {return nil}
+        return lifeTime > cacheLifeTime
+    }
+    
+    
+    // загружает изображение из файловой системы и при этом проводит ряд проверок
+    private func getImageFromCache(url: String) -> UIImage? {
+       guard let fileName = getFilePath(url: url),
+             !PhotoService.isFileOld(path: fileName),
+             let image = UIImage(contentsOfFile: fileName) else { return nil }
         
-        DispatchQueue.main.async {
-            self.images[url] = image
+        DispatchQueue.main.async { [weak self] in
+            self?.images[url] = image
         }
         
         return image
     }
-    
-    
-    private func updateImageFromCache() {
-        for image in 0...self.images.count {
-            let info = try? FileManager.default.attributesOfItem(atPath: image)
-            print("info: \(info)")
-        }
-    }
-    
     
     // словарь в котором будут храниться загруженные и извлеченные из файловой системы изображения
     private var images = [String: UIImage]()

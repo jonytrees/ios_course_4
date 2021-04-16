@@ -14,6 +14,7 @@ struct ItemsFriends: Decodable {
     var lastName: String = ""
     var photo: String = ""
     
+    
     enum CodingKeys: String, CodingKey {
         case firstName = "first_name"
         case lastName = "last_name"
@@ -35,6 +36,8 @@ class PromisesViewController: UIViewController, UITableViewDelegate, UITableView
     var userId = Session.userInfo.userId
     var version = "5.130"
     var friendsArr: [ItemsFriends] = []
+    var photoService: PhotoService?
+    var cellHeights = [IndexPath: CGFloat]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,22 +49,23 @@ class PromisesViewController: UIViewController, UITableViewDelegate, UITableView
             self?.friendsArr = friends
             self!.tableView.reloadData()
         }
+        
+        photoService = PhotoService(container: tableView)
     }
     
     func forecast() ->
     Promise<[ItemsFriends]> {
         let arr: [ItemsFriends] = []
-        guard let url = URL(string: "https://api.vk.com/method/friends.get?user_ids=\(userId)&fields=bdate&access_token=\(token)&v=\(version)") else {
+        guard let url = URL(string: "https://api.vk.com/method/friends.get?user_ids=\(userId)&fields=photo_50&access_token=\(token)&v=\(version)") else {
             return Promise.value(arr)
         }
-        
         return URLSession.shared.dataTask(.promise, with: url)
             .then(on: DispatchQueue.global()) { response -> Promise<[ItemsFriends]> in
                 let dataFriends = response.data
                 let json = try? ((JSONSerialization.jsonObject(with: dataFriends, options: .mutableContainers)) as! [String: AnyObject])
                 let main = json!["response"]
                 let items = main!["items"]
-                
+
                 let friends = try? JSONSerialization.data(withJSONObject: items!!)
                 let data = try? JSONDecoder().decode([ItemsFriends].self, from: friends!)
                 
@@ -78,11 +82,31 @@ class PromisesViewController: UIViewController, UITableViewDelegate, UITableView
         
         let firstName = friendsArr[indexPath.row].firstName
         let lastName = friendsArr[indexPath.row].lastName
-        let photoFriends = friendsArr[indexPath.row].photo
+        let fullName = firstName + " " + lastName
+        let photo = photoService?.photo(atIndexpath: indexPath, byUrl: friendsArr[indexPath.row].photo)
         
-        cell.setNameFriends(firstName: firstName, lastName: lastName, photo: photoFriends)
+        cell.setNameFriends(fullName: fullName, photo: photo)
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cellHeights[indexPath] = cell.bounds.height
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if let height = cellHeights[indexPath] {
+            return height
+        } else {
+            return UITableView.automaticDimension
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        if let height = cellHeights[indexPath] {
+            return height
+        } else {
+            return UITableView.automaticDimension
+        }
+    }
 }
